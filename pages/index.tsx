@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
+import { Button, Typography } from '@mui/material';
 
 const Home: NextPage = () => {
   return (
@@ -44,6 +45,15 @@ const Home: NextPage = () => {
             <h2>Deploy &rarr;</h2>
             <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
           </a>
+        </div>
+
+        <div style={{ padding: 20 }}>
+          <Typography variant="h4" gutterBottom>
+            Hello, Material UI!
+          </Typography>
+          <Button variant="contained" color="primary">
+            Click Me
+          </Button>
         </div>
       </main>
 
