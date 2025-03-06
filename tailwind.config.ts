@@ -8,7 +8,12 @@ export default {
   ],
   important: '#__next',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'point-purple': '#644BBA',
+        'point-purple-light': '#E7DFF8',
+      },
+    },
   },
   plugins: [],
 } satisfies Config;
