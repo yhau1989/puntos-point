@@ -7,8 +7,8 @@ import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
 import { Logout, ExpandMore } from '@mui/icons-material';
 
-const CURRENT_PATH = 'bg-point-purple text-white py-2 px-4 rounded-full font-semibold';
-const NORMAL_LINK = 'text-point-purple hover:underline py-2 px-4';
+const CURRENT_PATH = 'bg-point-purple text-white py-2 px-4 rounded-full font-semibold no-underline';
+const NORMAL_LINK = 'text-point-purple hover:underline py-2 px-4 no-underline';
 
 export default function TopBar() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -24,10 +24,16 @@ export default function TopBar() {
     <header className="bg-white shadow-md items-center">
       <div className="container mx-auto py-3 px-4 sm:px-0">
         <div className="flex flex-col sm:flex-row sm:justify-between items-center">
-          <nav className="flex md:flex-1 justify-center gap-4 sm:gap-10 text-sm font-semibold items-center">
-            <div className={CURRENT_PATH}>Dashboard</div>
-            <div className={NORMAL_LINK}>Clientes</div>
-            <div className={NORMAL_LINK}>Reglas de acumulación</div>
+          <nav className="flex md:flex-1 justify-center gap-4 sm:gap-10 text-sm font-semibold items-center no-underline">
+            <a href="#" className={CURRENT_PATH}>
+              Dashboard
+            </a>
+            <a href="#" className={NORMAL_LINK}>
+              Clientes
+            </a>
+            <a href="#" className={NORMAL_LINK}>
+              Reglas de acumulación
+            </a>
           </nav>
           <div className="text-[#1C1B1E] flex gap-1 items-center">
             <div className="font-semibold text-sm">Pamela Rojas Gonzalez</div>
